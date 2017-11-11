@@ -2,12 +2,19 @@
 
 namespace Watson\Rememberable;
 
-use Watson\Rememberable\Query\Builder;
-use Watson\Rememberable\Query\MongoDBBuilder;
-use Jenssegers\Mongodb\Connection;
 use Illuminate\Database\Connection as BaseConnection;
 use InvalidArgumentException;
+use Jenssegers\Mongodb\Connection;
+use Watson\Rememberable\Query\Builder;
+use Watson\Rememberable\Query\MongoDBBuilder;
 
+/**
+ * Trait Rememberable
+ * @package Watson\Rememberable
+ *
+ * @method static $this remember($time)
+ * @method $this remember($time)
+ */
 trait Rememberable
 {
     /**
@@ -17,7 +24,7 @@ trait Rememberable
      */
     protected function newBaseQueryBuilder()
     {
-        $conn = $this->getConnection();
+        $conn    = $this->getConnection();
         $grammar = $conn->getQueryGrammar();
 
         if ($conn instanceof Connection) {
