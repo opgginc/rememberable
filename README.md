@@ -1,3 +1,5 @@
+This is just forked version of rememberable for jenssegers's MongoDB ORM.
+
 Rememberable, Laravel 5 query cache
 ===================================
 
