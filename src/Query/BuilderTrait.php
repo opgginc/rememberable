@@ -2,6 +2,13 @@
 
 namespace Watson\Rememberable\Query;
 
+/**
+ * Trait BuilderTrait
+ * @package Watson\Rememberable\Query
+ *
+ * @method static $this remember($time)
+ * @method $this remember($time)
+ */
 trait BuilderTrait
 {
     /**
